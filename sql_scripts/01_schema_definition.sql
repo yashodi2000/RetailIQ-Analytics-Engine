@@ -1,8 +1,6 @@
 -- =============================================================================
 -- RetailIQ: Database Schema Definition
--- Target Database Name: apex_retail
--- Description: Creates all 13 core relational tables with updated constraints
---              for seamless CSV data ingestion.
+-- Target Database Name: RetailIQ_DB
 -- =============================================================================
 
 DROP TABLE IF EXISTS stock_transfers CASCADE;
@@ -19,48 +17,48 @@ DROP TABLE IF EXISTS warehouses CASCADE;
 DROP TABLE IF EXISTS stores CASCADE;
 DROP TABLE IF EXISTS regions CASCADE;
 
--- 1. REGIONS TABLE
+-- 1. REGIONS
 CREATE TABLE regions (
-    region_id VARCHAR(10) PRIMARY KEY,
+    region_id INT PRIMARY KEY,
     region_name VARCHAR(50) NOT NULL
 );
 
--- 2. STORES TABLE
+-- 2. STORES
 CREATE TABLE stores (
-    store_id VARCHAR(10) PRIMARY KEY,
-    region_id VARCHAR(10) NOT NULL,
+    store_id INT PRIMARY KEY,
+    region_id INT NOT NULL,
     store_name VARCHAR(100) NOT NULL,
     location VARCHAR(100) NOT NULL,
     CONSTRAINT fk_stores_region FOREIGN KEY (region_id) REFERENCES regions(region_id) ON DELETE CASCADE
 );
 
--- 3. WAREHOUSES TABLE
+-- 3. WAREHOUSES
 CREATE TABLE warehouses (
-    warehouse_id VARCHAR(10) PRIMARY KEY,
-    region_id VARCHAR(10) NOT NULL,
+    warehouse_id INT PRIMARY KEY,
+    region_id INT NOT NULL,
     warehouse_name VARCHAR(100) NOT NULL,
     location VARCHAR(100) NOT NULL,
     CONSTRAINT fk_warehouses_region FOREIGN KEY (region_id) REFERENCES regions(region_id) ON DELETE CASCADE
 );
 
--- 4. CATEGORIES TABLE
+-- 4. CATEGORIES
 CREATE TABLE categories (
-    category_id VARCHAR(10) PRIMARY KEY,
+    category_id INT PRIMARY KEY,
     category_name VARCHAR(50) NOT NULL
 );
 
--- 5. SUPPLIERS TABLE
+-- 5. SUPPLIERS
 CREATE TABLE suppliers (
-    supplier_id VARCHAR(10) PRIMARY KEY,
+    supplier_id INT PRIMARY KEY,
     supplier_name VARCHAR(100) NOT NULL,
     contact_info VARCHAR(150)
 );
 
--- 6. PRODUCTS TABLE
+-- 6. PRODUCTS
 CREATE TABLE products (
-    product_id VARCHAR(10) PRIMARY KEY,
-    category_id VARCHAR(10) NOT NULL,
-    supplier_id VARCHAR(10) NOT NULL,
+    product_id INT PRIMARY KEY,
+    category_id INT NOT NULL,
+    supplier_id INT NOT NULL,
     product_name VARCHAR(100) NOT NULL,
     unit_price DECIMAL(10,2) NOT NULL CHECK (unit_price >= 0),
     unit_cost DECIMAL(10,2) NOT NULL CHECK (unit_cost >= 0),
@@ -68,29 +66,29 @@ CREATE TABLE products (
     CONSTRAINT fk_products_supplier FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id)
 );
 
--- 7. CUSTOMERS TABLE
+-- 7. CUSTOMERS
 CREATE TABLE customers (
-    customer_id VARCHAR(10) PRIMARY KEY,
+    customer_id INT PRIMARY KEY,
     customer_name VARCHAR(100) NOT NULL,
     segment VARCHAR(50) NOT NULL
 );
 
--- 8. SALES_HEADER TABLE (MODIFIED: customer_id can be NULL for Guest checkouts)
+-- 8. SALES_HEADER
 CREATE TABLE sales_header (
-    order_id VARCHAR(20) PRIMARY KEY,
-    store_id VARCHAR(10) NOT NULL,
-    customer_id VARCHAR(10),
-    order_date DATE NOT NULL,
-    channel VARCHAR(20) NOT NULL CHECK (channel IN ('In-Store', 'E-Commerce', 'Mobile App', 'Web')),
+    order_id INT PRIMARY KEY,
+    store_id INT NOT NULL,
+    customer_id INT, -- NULL allowed for Guest checkout
+    order_date TIMESTAMP NOT NULL,
+    channel VARCHAR(20) NOT NULL CHECK (channel IN ('In-Store', 'E-Commerce')),
     CONSTRAINT fk_sales_store FOREIGN KEY (store_id) REFERENCES stores(store_id),
     CONSTRAINT fk_sales_customer FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
 
--- 9. SALES_ITEMS TABLE (MODIFIED: discount checked >= 0)
+-- 9. SALES_ITEMS
 CREATE TABLE sales_items (
-    line_id VARCHAR(20) PRIMARY KEY,
-    order_id VARCHAR(20) NOT NULL,
-    product_id VARCHAR(10) NOT NULL,
+    line_id INT PRIMARY KEY,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
     quantity INTEGER NOT NULL CHECK (quantity > 0),
     unit_price DECIMAL(10,2) NOT NULL CHECK (unit_price >= 0),
     discount DECIMAL(10,2) DEFAULT 0.00 CHECK (discount >= 0.00),
@@ -98,51 +96,55 @@ CREATE TABLE sales_items (
     CONSTRAINT fk_items_product FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
 
--- 10. RETURNS TABLE
+-- 10. RETURNS
 CREATE TABLE returns (
-    return_id VARCHAR(20) PRIMARY KEY,
-    line_id VARCHAR(20) NOT NULL,
-    return_date DATE NOT NULL,
-    return_quantity INTEGER NOT NULL CHECK (return_quantity > 0),
-    return_reason VARCHAR(100),
-    CONSTRAINT fk_returns_line FOREIGN KEY (line_id) REFERENCES sales_items(line_id)
+    return_id INT PRIMARY KEY,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    return_date TIMESTAMP NOT NULL,
+    quantity INTEGER NOT NULL CHECK (quantity > 0),
+    reason VARCHAR(100),
+    CONSTRAINT fk_returns_order FOREIGN KEY (order_id) REFERENCES sales_header(order_id),
+    CONSTRAINT fk_returns_product FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
 
--- 11. INVENTORY_SNAPSHOTS TABLE
+-- 11. INVENTORY_SNAPSHOTS
 CREATE TABLE inventory_snapshots (
-    snapshot_id VARCHAR(20) PRIMARY KEY,
-    product_id VARCHAR(10) NOT NULL,
-    store_id VARCHAR(10),
-    warehouse_id VARCHAR(10),
-    snapshot_date DATE NOT NULL,
-    quantity_on_hand INTEGER NOT NULL CHECK (quantity_on_hand >= 0),
+    snapshot_id INT PRIMARY KEY,
+    store_id INT,
+    warehouse_id INT,
+    product_id INT NOT NULL,
+    snapshot_date TIMESTAMP NOT NULL,
+    stock_on_hand INTEGER NOT NULL CHECK (stock_on_hand >= 0),
+    reorder_level INTEGER DEFAULT 20,
     CONSTRAINT fk_inv_product FOREIGN KEY (product_id) REFERENCES products(product_id),
     CONSTRAINT fk_inv_store FOREIGN KEY (store_id) REFERENCES stores(store_id),
-    CONSTRAINT fk_inv_warehouse FOREIGN KEY (warehouse_id) REFERENCES warehouses(warehouse_id),
-    CONSTRAINT chk_location_defined CHECK (
-        (store_id IS NOT NULL AND warehouse_id IS NULL) OR
-        (store_id IS NULL AND warehouse_id IS NOT NULL)
-    )
+    CONSTRAINT fk_inv_warehouse FOREIGN KEY (warehouse_id) REFERENCES warehouses(warehouse_id)
 );
 
--- 12. PURCHASE_ORDERS TABLE
+-- 12. PURCHASE_ORDERS
 CREATE TABLE purchase_orders (
-    po_id VARCHAR(20) PRIMARY KEY,
-    supplier_id VARCHAR(10) NOT NULL,
-    order_date DATE NOT NULL,
-    expected_date DATE NOT NULL,
-    received_date DATE,
-    status VARCHAR(20) NOT NULL CHECK (status IN ('Pending', 'Completed', 'Delayed', 'Cancelled')),
-    CONSTRAINT fk_po_supplier FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id)
+    po_id INT PRIMARY KEY,
+    supplier_id INT NOT NULL,
+    warehouse_id INT NOT NULL,
+    order_date TIMESTAMP NOT NULL,
+    expected_date TIMESTAMP,
+    received_date TIMESTAMP,
+    status VARCHAR(20) NOT NULL CHECK (status IN ('Pending', 'Completed', 'In-Transit', 'Delayed', 'Cancelled')),
+    total_cost DECIMAL(10,2),
+    CONSTRAINT fk_po_supplier FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id),
+    CONSTRAINT fk_po_warehouse FOREIGN KEY (warehouse_id) REFERENCES warehouses(warehouse_id)
 );
 
--- 13. STOCK_TRANSFERS TABLE
+-- 13. STOCK_TRANSFERS
 CREATE TABLE stock_transfers (
-    transfer_id VARCHAR(20) PRIMARY KEY,
-    po_id VARCHAR(20) NOT NULL,
-    from_location VARCHAR(20) NOT NULL,
-    to_location VARCHAR(20) NOT NULL,
-    transfer_date DATE NOT NULL,
+    transfer_id INT PRIMARY KEY,
+    from_warehouse_id INT NOT NULL,
+    to_store_id INT NOT NULL,
+    product_id INT NOT NULL,
     quantity INTEGER NOT NULL CHECK (quantity > 0),
-    CONSTRAINT fk_transfer_po FOREIGN KEY (po_id) REFERENCES purchase_orders(po_id)
+    transfer_date TIMESTAMP NOT NULL,
+    CONSTRAINT fk_trans_wh FOREIGN KEY (from_warehouse_id) REFERENCES warehouses(warehouse_id),
+    CONSTRAINT fk_trans_store FOREIGN KEY (to_store_id) REFERENCES stores(store_id),
+    CONSTRAINT fk_trans_prod FOREIGN KEY (product_id) REFERENCES products(product_id)
 );

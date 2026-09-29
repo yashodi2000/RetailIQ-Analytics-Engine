@@ -1,0 +1,5 @@
+warehouse_id,region_id,warehouse_name,location
+1,2,WH_1,Industrial_Zone_1
+2,2,WH_2,Industrial_Zone_2
+3,2,WH_3,Industrial_Zone_3
+4,4,WH_4,Industrial_Zone_4

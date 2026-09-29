@@ -16,3 +16,14 @@ FROM sales_header h
 JOIN sales_items i ON h.order_id = i.order_id
 GROUP BY month
 ORDER BY month;
+
+-- 3. Regional Revenue Performance
+SELECT 
+    r.region_name,
+    SUM((i.quantity * i.unit_price) * (1 - i.discount)) AS regional_revenue
+FROM sales_header h
+JOIN stores st ON h.store_id = st.store_id
+JOIN regions r ON st.region_id = r.region_id
+JOIN sales_items i ON h.order_id = i.order_id
+GROUP BY r.region_name
+ORDER BY regional_revenue DESC;

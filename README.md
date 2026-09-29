@@ -4,7 +4,6 @@
 ### Retail Sales & Inventory Performance Analytics
 
 **An end-to-end Business Intelligence & Data Analytics project for Apex Retail Corporation**
-*Codezela Career Accelerator (CCA) — Data Analyst 8-Week Individual Internship Project*
 
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-Analysis-3776AB?style=for-the-badge&logo=python&logoColor=white)

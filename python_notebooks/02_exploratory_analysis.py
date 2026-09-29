@@ -1,18 +1,15 @@
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sqlalchemy import create_engine
 
-# Chart Formatting Setup
 sns.set_theme(style="whitegrid")
 plt.rcParams['figure.figsize'] = (10, 6)
 
-# Database Connection
-DB_URL = "postgresql://postgres:your_postgres_password@localhost:5432/apex_retail"
+DB_URL = "postgresql://postgres:ny31#@localhost:5432/RetailIQ_DB"
 engine = create_engine(DB_URL)
 
-# 1. Monthly Revenue Trend Analysis
+# 1. Monthly Revenue Trend
 monthly_rev_query = """
 SELECT 
     DATE_TRUNC('month', h.order_date) AS month,
@@ -26,7 +23,7 @@ df_monthly = pd.read_sql(monthly_rev_query, engine)
 
 plt.figure()
 sns.lineplot(data=df_monthly, x='month', y='net_revenue', marker='o', color='b')
-plt.title('Monthly Net Revenue Trend')
+plt.title('Monthly Net Revenue Trend (2024 - 2025)')
 plt.xlabel('Month')
 plt.ylabel('Net Revenue ($)')
 plt.xticks(rotation=45)

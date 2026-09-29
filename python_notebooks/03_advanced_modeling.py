@@ -1,16 +1,13 @@
 import pandas as pd
-import numpy as np
 from sqlalchemy import create_engine
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, r2_score
 
-# Database Connection
-DB_URL = "postgresql://postgres:your_postgres_password@localhost:5432/apex_retail"
+DB_URL = "postgresql://postgres:ny31#@localhost:5432/RetailIQ_DB"
 engine = create_engine(DB_URL)
 
-# 1. Calculate Inventory Reorder Point (ROP)
-# ROP = (Average Daily Demand * Lead Time) + Safety Stock
+# 1. Inventory Reorder Point (ROP) Calculation
 rop_query = """
 SELECT 
     product_id,
@@ -27,17 +24,17 @@ df_demand['reorder_point'] = (df_demand['avg_daily_demand'] * LEAD_TIME_DAYS) + 
 print("--- Calculated Reorder Points (ROP) ---")
 print(df_demand.head())
 
-# 2. Machine Learning: Sales Demand Forecasting
+# 2. Demand Forecasting Model
 print("\n--- Training Demand Forecasting Model ---")
 
 daily_sales_query = """
 SELECT 
-    h.order_date,
+    h.order_date::date AS order_date,
     s.product_id,
     SUM(s.quantity) AS total_quantity
 FROM sales_header h
 JOIN sales_items s ON h.order_id = s.order_id
-GROUP BY h.order_date, s.product_id;
+GROUP BY h.order_date::date, s.product_id;
 """
 df_sales = pd.read_sql(daily_sales_query, engine)
 df_sales['order_date'] = pd.to_datetime(df_sales['order_date'])
