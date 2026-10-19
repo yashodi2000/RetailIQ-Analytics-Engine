@@ -2,13 +2,13 @@
 
 <p align="center">
 
-### Turning Retail Data into Actionable Business Intelligence
-
-**Codezela Career Accelerator (CCA) | Data Analyst Internship**
-
-*An Individual 8-Week End-to-End Business Intelligence & Data Analytics Project*
+**An End-to-End Business Intelligence & Data Analytics Project for Apex Retail Corporation**
 
 </p>
+
+RetailIQ transforms retail sales, inventory, supplier, customer and store data into validated business intelligence using **PostgreSQL, SQL, Python and Power BI**.
+
+> **Core principle:** Data must be cleaned, validated and reconciled before it is used for business insight or dashboard reporting.
 
 <p align="center">
   <img src="https://img.shields.io/badge/SQL-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
@@ -477,18 +477,38 @@ RetailIQ is planned as a **seven-page interactive business intelligence dashboar
 
 ### 🖼️ Dashboard Preview
 
-Place actual dashboard screenshots here after the report has been built.
+### 1. Executive Overview
+![Dashboard 01](dashboards/screenshots/Dashboard%2001.png)
 
-Example Markdown for the completed repository:
+---
 
-```markdown
-![Executive Overview](dashboards/screenshots/01_executive_overview.png)
-![Sales and Revenue](dashboards/screenshots/02_sales_revenue.png)
-![Inventory Health](dashboards/screenshots/03_inventory_health.png)
-```
+### 2. Sales & Revenue
+![Dashboard 02](dashboards/screenshots/Dashboard%2002.png)
 
-Continue with the remaining four screenshots. Do not add placeholder images as evidence of a completed dashboard.
+---
 
+### 3. Inventory Health
+![Dashboard 03](dashboards/screenshots/Dashboard%2003.png)
+
+---
+
+### 4. Warehouse Logistics
+![Dashboard 04](dashboards/screenshots/Dashboard%2004.png)
+
+---
+
+### 5. Supplier Scorecard
+![Dashboard 05](dashboards/screenshots/Dashboard%2005.png)
+
+---
+
+### 6. Store Performance
+![Dashboard 06](dashboards/screenshots/Dashboard%2006.png)
+
+---
+
+### 7. Customer Analytics
+![Dashboard 07](dashboards/screenshots/Dashboard%2007.png)
 ---
 
 ## 🛠️ Technology Stack
@@ -726,11 +746,13 @@ The project should be reproducible and explainable. Every important calculation 
 
 ### **Yashodi Chathurya Abeysundara**
 
-**Data Analyst Intern | RetailIQ Project**
+**Data Analyst**
 
-Codezela Career Accelerator (CCA)
+Apex Retail Corporation — RetailIQ Project
 
-<a href="https://github.com/YashodiChathurya">GitHub Profile</a>
+<br>
+
+⭐ *If you found this project useful, consider giving it a star!*
 
 </p>
 
@@ -738,10 +760,6 @@ Codezela Career Accelerator (CCA)
 
 <p align="center">
 
-### 🛒 RetailIQ
-
-**Turning Retail Data into Actionable Business Intelligence.**
-
-*Clean Data. Trusted Metrics. Better Decisions.*
+**RetailIQ — Turning Retail Data into Business Intelligence.**
 
 </p>
