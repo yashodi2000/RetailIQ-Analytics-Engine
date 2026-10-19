@@ -740,15 +740,13 @@ The project should be reproducible and explainable. Every important calculation 
 
 ---
 
-## 👤 Author
+## 👨‍💻 Author
 
 <p align="center">
 
 ### **Yashodi Chathurya Abeysundara**
-
-**Data Analyst**
-
-Apex Retail Corporation — RetailIQ Project
+**Data Analyst**  
+Apex Retail Corporation — RetailIQ Project  
 
 <br>
 
