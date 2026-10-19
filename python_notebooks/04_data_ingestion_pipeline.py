@@ -11,10 +11,8 @@ DB_NAME = "RetailIQ_DB"
 
 DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data" / "raw"
+DATA_DIR = Path(r"C:\Users\DELL\Desktop\RetailIQ-Analytics-Engine\data\raw")
 
-# Sequence of tables for Ingestion & Cleanup
 TABLE_MAP = [
     ('regions', 'Regions'),
     ('stores', 'Stores'),
@@ -52,6 +50,8 @@ def ingest_data():
             conn.commit()
             print("🧹 Cleaned existing records across all 13 tables\n")
 
+        valid_order_ids = set()
+
         # 2. Ingest raw CSV files step-by-step
         for idx, (table_name, display_name) in enumerate(TABLE_MAP, start=1):
             csv_path = DATA_DIR / f"{table_name}.csv"
@@ -61,18 +61,33 @@ def ingest_data():
                 continue
 
             df = pd.read_csv(csv_path)
-
-            # Clean integer/nullable columns
+           
             if 'customer_id' in df.columns:
                 df['customer_id'] = df['customer_id'].astype('Int64')
+                if table_name == 'sales_header':
+                    df = df.dropna(subset=['customer_id'])
 
-            # Convert text columns to native datetime objects for PostgreSQL
+            # Capture valid order_ids after reading sales_header
+            if table_name == 'sales_header' and 'order_id' in df.columns:
+                valid_order_ids = set(df['order_id'].dropna().unique())
+
+            # Filter sales_items to prevent ForeignKeyViolation
+            if table_name == 'sales_items' and 'order_id' in df.columns and valid_order_ids:
+                initial_count = len(df)
+                df = df[df['order_id'].isin(valid_order_ids)]
+                print(f"🔍 Filtered sales_items: kept {len(df)} of {initial_count} rows matching sales_header.")
+
+            # Filter returns to prevent ForeignKeyViolation
+            if table_name == 'returns' and 'order_id' in df.columns and valid_order_ids:
+                initial_count = len(df)
+                df = df[df['order_id'].isin(valid_order_ids)]
+                print(f"🔍 Filtered returns: kept {len(df)} of {initial_count} rows matching sales_header.")
+
             if table_name in DATETIME_COLS:
                 for col in DATETIME_COLS[table_name]:
                     if col in df.columns:
                         df[col] = pd.to_datetime(df[col], errors='coerce')
 
-            # Append to DB
             df.to_sql(name=table_name, con=engine, if_exists='append', index=False)
             print(f"✅ {idx}/13 {display_name} Ingested")
 
