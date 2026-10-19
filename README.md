@@ -1,30 +1,28 @@
-# 🛒 RetailIQ
-
-### Retail Sales & Inventory Performance Analytics
+# 🛒 RetailIQ — Retail Sales & Inventory Performance Analytics
 
 <p align="center">
 
-**An End-to-End Business Intelligence & Data Analytics Project for Apex Retail Corporation**
+### Turning Retail Data into Actionable Business Intelligence
+
+**Codezela Career Accelerator (CCA) | Data Analyst Internship**
+
+*An Individual 8-Week End-to-End Business Intelligence & Data Analytics Project*
 
 </p>
 
-RetailIQ transforms retail sales, inventory, supplier, customer and store data into validated business intelligence using **PostgreSQL, SQL, Python and Power BI**.
-
-> **Core principle:** Data must be cleaned, validated and reconciled before it is used for business insight or dashboard reporting.
+<p align="center">
+  <img src="https://img.shields.io/badge/SQL-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/Python-Analytics-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
+  <img src="https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI"/>
+  <img src="https://img.shields.io/badge/GitHub-Version%20Control-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+</p>
 
 <p align="center">
-
-<img src="https://img.shields.io/badge/Power%20BI-Analytics-yellow?style=for-the-badge&logo=powerbi" />
-<img src="https://img.shields.io/badge/Python-Analytics-blue?style=for-the-badge&logo=python" />
-<img src="https://img.shields.io/badge/SQL-PostgreSQL-blue?style=for-the-badge&logo=postgresql" />
-<img src="https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge&logo=jupyter" />
-
-<br><br>
-
-<img src="https://img.shields.io/badge/Status-COMPLETED-success?style=flat-square" />
-<img src="https://img.shields.io/badge/Tables-13-informational?style=flat-square" />
-<img src="https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square" />
-
+  <img src="https://img.shields.io/badge/Project-Individual-blue?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Duration-8%20Weeks-informational?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Database-13%20Tables-success?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Dashboard-7%20Pages-yellow?style=flat-square"/>
 </p>
 
 ---
@@ -32,68 +30,112 @@ RetailIQ transforms retail sales, inventory, supplier, customer and store data i
 ## 📑 Table of Contents
 
 - [📌 Project Overview](#-project-overview)
-- [🎯 Project Objectives](#-project-objectives)
+- [🏢 Business Scenario](#-business-scenario)
+- [🎯 Business Problem](#-business-problem)
+- [🚀 Project Objectives](#-project-objectives)
 - [👥 Stakeholders](#-stakeholders)
+- [📦 Project Scope](#-project-scope)
 - [🗄️ Data Architecture](#️-data-architecture)
-- [🔐 Data Integrity Rules](#-data-integrity-rules)
 - [🧹 Data Quality & Cleaning](#-data-quality--cleaning)
-- [📊 Core KPIs](#-core-kpis)
-- [🧮 KPI Validation](#-kpi-validation)
-- [🔬 Advanced Analytics](#-advanced-analytics)
+- [📊 Core Business KPIs](#-core-business-kpis)
+- [🔎 Business Analysis](#-business-analysis)
+- [🧠 Advanced Analytics](#-advanced-analytics)
 - [📈 Power BI Dashboard](#-power-bi-dashboard)
 - [🛠️ Technology Stack](#️-technology-stack)
 - [📂 Repository Structure](#-repository-structure)
 - [⚙️ Installation & Setup](#️-installation--setup)
-- [📅 8-Week Project Plan](#-8-week-project-plan)
+- [📅 Eight-Week Project Plan](#-eight-week-project-plan)
 - [📦 Project Deliverables](#-project-deliverables)
-- [🎓 Project Outcome](#-project-outcome)
+- [✅ Validation Checklist](#-validation-checklist)
+- [⚠️ Limitations](#️-limitations)
 - [👤 Author](#-author)
 
 ---
 
 ## 📌 Project Overview
 
-**Apex Retail Corporation** is a simulated retail business operating across multiple regions, stores and warehouses.
+**RetailIQ** is an end-to-end Business Intelligence and Data Analytics project developed for the simulated retail business **Apex Retail Corporation** as part of the Codezela Career Accelerator (CCA) Data Analyst Internship.
 
-| Business Area | Scope |
-|---|---:|
-| 🏪 **Retail Stores** | 25 |
-| 🌍 **Regions** | 4 |
-| 🏭 **Regional Warehouses** | 4 |
-| 🏷️ **Active SKUs** | 1,200 |
-| 🛒 **Sales Channels** | In-store & E-commerce |
-| 📅 **Analysis Period** | Jan 2024 – Dec 2025 |
+The project transforms raw retail data into reliable, validated, and actionable business intelligence using SQL, Python, and Power BI.
 
-The business currently relies on delayed reporting, making it difficult to identify inventory problems, supplier issues, customer behaviour and store performance quickly.
+By integrating sales, inventory, suppliers, stores, warehouses, products, and customer information, RetailIQ aims to help business stakeholders understand performance, identify operational risks, and make evidence-based decisions.
 
-### 🔎 RetailIQ provides one analytical view of:
+### 🔑 Core Principle
 
-- 💰 Sales and revenue performance
-- 📈 Profitability and margins
-- 📦 Inventory health
-- ⚠️ Stock-outs and deadstock
-- 🚚 Warehouse logistics
-- 🤝 Supplier reliability
-- 🏪 Store performance
-- 👥 Customer behaviour
-- 🏷️ Product and category performance
+> **Data must be cleaned, validated, and reconciled before it is used for business insights or dashboard reporting.**
+
+### 🔄 End-to-End Analytics Workflow
+
+```text
+Raw Data
+   ↓
+Database Design & Data Ingestion
+   ↓
+Data Quality Audit
+   ↓
+SQL Data Cleaning & Transformation
+   ↓
+KPI Calculation & Validation
+   ↓
+Exploratory Data Analysis
+   ↓
+Advanced Analytics
+   ↓
+Interactive Power BI Dashboard
+   ↓
+Executive Insights & Recommendations
+```
 
 ---
 
-## 🎯 Project Objectives
+## 🏢 Business Scenario
 
-RetailIQ directly supports six core business objectives:
+Apex Retail Corporation is a simulated retail organisation operating across multiple regions, with physical retail stores and an e-commerce sales channel.
 
-| # | Objective | Description |
-|:-:|---|---|
-| 1️⃣ | **Inventory Visibility** | Identify healthy, low, excessive and slow-moving inventory |
-| 2️⃣ | **Revenue & Margin Clarity** | Analyse revenue, costs and profitability across products, regions and channels |
-| 3️⃣ | **Supplier Accountability** | Measure supplier reliability, lead time, delays and defects |
-| 4️⃣ | **Customer Insights** | Understand customer value, purchasing behaviour and segments |
-| 5️⃣ | **Executive Reporting** | Provide leadership with a clear interactive BI view |
-| 6️⃣ | **Actionable Recommendations** | Convert validated analytical findings into practical business actions |
+| Business Attribute | Project Scope |
+|---|---|
+| 🏪 Retail Outlets | 25 |
+| 🌍 Regions | East, Midwest, South, West |
+| 🏭 Regional Warehouses | 4 |
+| 🏷️ Active Product SKUs | 1,200 |
+| 🛒 Sales Channels | In-store & E-commerce |
+| 📅 Analysis Period | January 2024 – December 2025 |
+| 🗄️ Relational Database | 13 Related Tables |
 
-Every major KPI, query, visualization and recommendation is connected to one or more of these objectives.
+*The figures above describe the project scenario, not verified analytical results.*
+
+---
+
+## 🎯 Business Problem
+
+Apex Retail faces several challenges that can affect profitability, inventory availability, and operational efficiency.
+
+- ⚠️ Stock-outs in some locations while excess inventory remains elsewhere.
+- 📦 Slow-moving products tying up working capital.
+- 🚚 Limited visibility into supplier delivery delays and incomplete orders.
+- 📉 Inconsistent reporting across business functions.
+- 🏪 Difficulty comparing store and regional performance.
+- 👥 Limited understanding of customer purchasing patterns and product relationships.
+- ⏳ Delays in turning operational data into useful business insights.
+
+### 💡 RetailIQ Solution
+
+RetailIQ provides a structured analytical framework that connects validated data with meaningful KPIs, interactive visualisations, and evidence-based recommendations.
+
+The objective is to help decision-makers understand **what is happening, where it is happening, why it may be happening, and what action should be considered next.**
+
+---
+
+## 🚀 Project Objectives
+
+| # | Objective | Expected Business Value |
+|---|---|---|
+| 1 | 📦 Inventory Visibility | Identify low stock, stock-outs, excess inventory, and slow-moving products |
+| 2 | 💰 Revenue & Profitability | Analyse revenue, costs, margins, and returns |
+| 3 | 🚚 Supplier Accountability | Evaluate delivery reliability, lead times, and defects where data is available |
+| 4 | 👥 Customer Intelligence | Understand customer value, purchase frequency, and buying behaviour |
+| 5 | 📊 Executive Reporting | Deliver a consistent, interactive business performance view |
+| 6 | 🎯 Actionable Recommendations | Translate validated findings into practical business actions |
 
 ---
 
@@ -101,35 +143,63 @@ Every major KPI, query, visualization and recommendation is connected to one or 
 
 | Stakeholder | Key Business Questions |
 |---|---|
-| 💼 **CEO / Finance** | How much revenue and margin are being generated? How much capital is tied up in inventory? |
-| 📦 **Inventory Manager** | Where are stock-outs, excess stock and deadstock occurring? |
-| 🤝 **Procurement Manager** | Which suppliers are reliable? Where are delays and defects occurring? |
-| 📣 **Sales & Marketing** | Which channels, products and customer segments generate value? |
-| ⚙️ **Operations Manager** | How are stores and regions performing? Where are stock transfers occurring? |
+| 💼 CEO / Finance | How much revenue and gross profit are generated? How much capital is tied up in inventory? |
+| 📦 Inventory Manager | Which products are at risk of stock-outs or excess inventory? |
+| 🤝 Procurement Manager | Which suppliers deliver reliably and which require attention? |
+| 📣 Sales & Marketing | Which products, channels, and customer segments contribute the most value? |
+| ⚙️ Operations Manager | Which stores and regions perform well, and where are operational improvements needed? |
+
+---
+
+## 📦 Project Scope
+
+### ✅ Included
+
+- Design and implement a relational database containing 13 related tables.
+- Preserve raw data and document data quality issues.
+- Clean, validate, and transform data using SQL and Python.
+- Calculate and reconcile core business KPIs.
+- Conduct exploratory data analysis (EDA).
+- Perform customer, inventory, product, and market basket analysis where supported by the data.
+- Answer business questions through documented SQL queries.
+- Develop a seven-page interactive Power BI or Tableau dashboard.
+- Prepare an executive business report and a 10-slide presentation.
+- Maintain version-controlled code, documentation, and weekly progress evidence.
+
+### 🚫 Outside Scope
+
+- Access to real company systems or live ERP integration.
+- Building a full production web application.
+- Presenting unverified calculations as business results.
+- Making unsupported claims about business impact.
 
 ---
 
 ## 🗄️ Data Architecture
 
-RetailIQ uses a **13-table relational database** covering sales, products, customers, inventory, suppliers, stores, warehouses, purchase orders and stock transfers.
+RetailIQ uses a relational data model covering sales transactions, customers, products, inventory, suppliers, stores, warehouses, returns, purchase orders, and stock transfers.
 
-### 🔗 Conceptual Data Map
+### 🔗 Conceptual Data Relationships
 
 ```text
-Categories ───────→ Products ←─────── Suppliers
-                         │
-                         ↓
-Customers ───────→ Sales Header ─────→ Sales Items
-                         │                  │
-                         │                  ↓
-                         │              Products
-                         │
-                         ↓
-                      Returns
+Regions ────────────┬──────────── Stores
+                    └──────────── Warehouses
 
-Warehouses / Stores ──→ Inventory Snapshots ←── Products
+Categories ───────────────────── Products
+Suppliers ────────────────────── Products
 
-Suppliers ──→ Purchase Orders ──→ Stock Transfers
+Customers ────────────────────── Sales Header
+Stores ───────────────────────── Sales Header
+Sales Header ─────────────────── Sales Items
+Products ─────────────────────── Sales Items
+Sales Items ──────────────────── Returns
+
+Products ─────────────────────── Inventory Snapshots
+Stores ───────────────────────── Inventory Snapshots
+Warehouses ───────────────────── Inventory Snapshots
+
+Suppliers ────────────────────── Purchase Orders
+Purchase Orders ──────────────── Stock Transfers
 ```
 
 ### 🧩 Entity Relationship Diagram
@@ -143,142 +213,281 @@ erDiagram
     CUSTOMERS ||--o{ SALES_HEADER : places
     STORES ||--o{ SALES_HEADER : records
     SALES_HEADER ||--o{ SALES_ITEMS : contains
-    PRODUCTS ||--o{ SALES_ITEMS : sold_as
+    PRODUCTS ||--o{ SALES_ITEMS : identifies
     SALES_ITEMS ||--o{ RETURNS : generates
-    PRODUCTS ||--o{ INVENTORY_SNAPSHOTS : tracked_in
+    PRODUCTS ||--o{ INVENTORY_SNAPSHOTS : tracks
     STORES ||--o{ INVENTORY_SNAPSHOTS : holds
     WAREHOUSES ||--o{ INVENTORY_SNAPSHOTS : holds
     SUPPLIERS ||--o{ PURCHASE_ORDERS : receives
-    PURCHASE_ORDERS ||--o{ STOCK_TRANSFERS : triggers
+    PURCHASE_ORDERS ||--o{ STOCK_TRANSFERS : relates_to
 ```
 
-> **Schema note:** The physical SQL schema is the source of truth for table relationships. The ERD is maintained alongside `sql_scripts/01_schema_definition.sql`.
+*The diagram is conceptual. The implemented SQL schema is the source of truth for the actual foreign keys and relationship cardinalities.*
 
 ### 🗃️ Database Tables
 
 | # | Table | Purpose |
-|:-:|---|---|
+|---:|---|---|
 | 1 | `regions` | Regional master data |
 | 2 | `stores` | Retail outlet information |
-| 3 | `warehouses` | Regional warehouse information |
-| 4 | `categories` | Product category master |
+| 3 | `warehouses` | Warehouse information |
+| 4 | `categories` | Product category classification |
 | 5 | `suppliers` | Supplier master data |
 | 6 | `products` | Product and SKU information |
 | 7 | `customers` | Customer master data |
-| 8 | `sales_header` | Order-level transaction information |
+| 8 | `sales_header` | Order-level transaction details |
 | 9 | `sales_items` | Product-level sales transactions |
-| 10 | `returns` | Returned sales units |
-| 11 | `inventory_snapshots` | Historical inventory levels |
-| 12 | `purchase_orders` | Supplier purchase orders |
-| 13 | `stock_transfers` | Stock movement between locations |
+| 10 | `returns` | Returned sales units and records |
+| 11 | `inventory_snapshots` | Historical inventory quantities |
+| 12 | `purchase_orders` | Supplier purchasing activity |
+| 13 | `stock_transfers` | Stock movement records |
 
----
+### 🔐 Database Integrity Requirements
 
-## 🔐 Data Integrity Rules
-
-RetailIQ follows defined data integrity and governance rules:
-
-- ✅ Primary keys are defined for relevant tables.
-- ✅ Foreign-key relationships are enforced and referential integrity is checked.
-- ✅ Returns are stored separately and are never represented as negative sales transactions.
-- ✅ Raw data is preserved separately from processed data.
-- ✅ Cleaning logic is maintained through reproducible SQL and Python scripts.
-- ✅ Data-quality exceptions are documented.
-- ✅ Analytical tables are generated only from validated data.
+- Enforce primary keys and foreign keys.
+- Apply appropriate constraints and data types.
+- Keep sales headers separate from sales line items.
+- Store returns as separate records rather than automatically treating them as negative sales.
+- Preserve source files and maintain traceable transformations.
+- Validate row counts and referential integrity after loading and cleaning.
 
 ---
 
 ## 🧹 Data Quality & Cleaning
 
-Data cleaning is treated as a major project deliverable. Raw files are never edited directly. Cleaning logic is maintained through version-controlled SQL scripts and Python analysis.
+Data quality is a central part of RetailIQ. Raw source data must remain unchanged while cleaning rules are applied reproducibly.
 
-| Issue | Treatment |
+| Data Quality Issue | Treatment |
 |---|---|
-| 🔁 **Duplicate records** | Identified using documented duplicate-detection rules |
-| 👤 **Missing customers** | Mapped to a standard Guest Checkout record where appropriate |
-| 💲 **Invalid prices** | Flagged and handled according to validation rules |
-| 🔢 **Zero/invalid quantities** | Identified and investigated |
-| 🏷️ **Invalid discounts** | Checked against business rules |
-| 📅 **Date inconsistencies** | Standardised before time-based analysis |
-| 🔗 **Orphan keys** | Identified and logged rather than silently removed |
-| 📈 **Outliers** | Investigated to separate genuine transactions from data-entry issues |
+| 🔁 Duplicate records | Detect using documented business keys and investigate |
+| 👤 Missing customers | Use a Guest Checkout mapping only where appropriate |
+| 💲 Invalid prices | Flag and investigate according to business rules |
+| 🔢 Invalid quantities | Identify zero, negative, or otherwise invalid values |
+| 🏷️ Discount anomalies | Validate discount ranges and transaction logic |
+| 📅 Date inconsistencies | Standardise formats and validate reporting periods |
+| 🔗 Orphan foreign keys | Log records referencing missing entities |
+| 📈 Outliers | Investigate unusual values before correction or exclusion |
+| 📦 Inventory inconsistencies | Check duplicate snapshots and product-location combinations |
+
+### Recommended Data Quality Workflow
+
+1. Preserve original source files.
+2. Profile each table and record initial row counts.
+3. Check missing values, duplicates, invalid values, outliers, and orphan keys.
+4. Document cleaning rules and assumptions.
+5. Apply repeatable transformations using SQL and Python.
+6. Store processed data separately from raw data.
+7. Log rejected rows and material corrections.
+8. Compare before-and-after counts and validate relationships.
+9. Approve the cleaned data before KPI calculation.
 
 ---
 
-## 📊 Core KPIs
+## 📊 Core Business KPIs
 
-Required KPIs are calculated through SQL/Python and cross-checked before being published in Power BI.
+RetailIQ calculates its required KPIs using documented definitions and reconciles results across SQL, Python, and Power BI where applicable.
 
-| KPI | Purpose |
-|---|---|
-| 💰 **Gross Revenue** | Measures sales revenue before applicable adjustments |
-| 💵 **Net Revenue** | Measures sales revenue after applicable discounts and returns |
-| 📈 **Gross Margin %** | Measures profitability after cost of goods sold |
-| 🔄 **Inventory Turnover** | Measures how frequently inventory is sold and replaced |
-| 📦 **Days of Inventory (DIO)** | Estimates how many days of inventory are held |
-| ⚠️ **Stock-out Rate** | Measures inventory unavailability |
-| 🚚 **Supplier OTIF %** | Measures on-time and in-full supplier delivery |
-| 🧾 **Average Order Value (AOV)** | Measures average revenue per order |
-| ↩️ **Return Rate %** | Measures returned units relative to sold units |
+| KPI | Calculation Principle | Business Purpose |
+|---|---|---|
+| 💰 Gross Revenue | Sales value before applicable discounts and returns | Understand sales generated |
+| 💵 Net Revenue | Revenue after applicable discounts and returns | Measure realised sales revenue |
+| 📈 Gross Margin % | Gross profit ÷ net revenue × 100 | Evaluate profitability |
+| 🔄 Inventory Turnover | Cost of goods sold ÷ average inventory at cost | Measure inventory efficiency |
+| 📦 Days of Inventory (DIO) | Average inventory at cost ÷ COGS × period days | Estimate inventory coverage |
+| ⚠️ Stock-out Rate | Eligible stock-out events ÷ eligible observations × 100 | Measure availability problems |
+| 🚚 Supplier OTIF % | On-time and in-full eligible deliveries ÷ eligible deliveries × 100 | Measure supplier reliability |
+| 🧾 Average Order Value | Eligible order revenue ÷ eligible order count | Measure average order value |
+| ↩️ Return Rate % | Returned units ÷ eligible units sold × 100 | Monitor returns |
 
-Detailed calculation logic is maintained in `sql_scripts/03_kpi_calculations.sql`.
+### 🧮 KPI Formula Reference
 
----
+```text
+Gross Profit = Net Revenue - Cost of Goods Sold
 
-## 🧮 KPI Validation
+Gross Margin % = (Gross Profit / Net Revenue) × 100
 
-A major project requirement is consistency between analytical layers.
+AOV = Eligible Order Revenue / Eligible Order Count
+
+Inventory Turnover =
+    Cost of Goods Sold / Average Inventory at Cost
+
+DIO =
+    (Average Inventory at Cost / Cost of Goods Sold)
+    × Number of Days in the Period
+
+Supplier OTIF % =
+    (On-Time and In-Full Eligible Deliveries
+    / Total Eligible Deliveries) × 100
+
+Return Rate % =
+    (Returned Units / Eligible Units Sold) × 100
+```
+
+**Important:** These are calculation principles, not precomputed results. The final implementation must document the treatment of discounts, returns, cancellations, missing values, and zero denominators. The inventory and supplier measures also require suitable historical inventory and delivery data.
+
+### 🔍 KPI Validation Pipeline
 
 ```text
 Raw Data
    ↓
-SQL Cleaning
+Validated Database
    ↓
-Processed Data
+SQL Transformations
    ↓
-SQL KPI Calculation
+SQL KPI Results
    ↓
-Python Cross-Check
+Python Cross-Checks
    ↓
 Power BI Measures
    ↓
-Final Validation
+Final Reconciliation
 ```
 
-KPI results are compared between SQL, Python and Power BI. Any material mismatch is investigated before the metric is used in the final report or dashboard.
+A material discrepancy must be investigated before the affected metric is used in reporting.
 
 ---
 
-## 🔬 Advanced Analytics
+## 🔎 Business Analysis
 
-RetailIQ goes beyond basic descriptive reporting by applying advanced analytical methods:
+The project organises its analytical questions into six areas.
 
-| Area | Techniques |
-|---|---|
-| 🧑‍🤝‍🧑 **Customer Analytics** | RFM analysis, customer segmentation, recency analysis, purchase frequency and monetary contribution |
-| 📦 **Inventory Analytics** | Reorder Point (ROP), inventory velocity, deadstock identification, slow-moving inventory and inventory value |
-| 🏷️ **Product Analytics** | Product contribution, category performance, margin contribution, product ranking and weak-margin products |
-| 🛒 **Market Basket Analysis** | Product co-purchase analysis, product affinity and frequently purchased combinations |
+### 1. 💰 Sales Performance
+
+- How does revenue change over time?
+- Which channels, regions, and stores contribute to sales?
+- Which products and categories generate the highest revenue?
+- How do discounts and returns affect reported performance?
+
+### 2. 📦 Inventory Health
+
+- Which product-location combinations are out of stock?
+- Which products have low or excessive inventory?
+- Which items show low movement over the selected analysis period?
+- Where are reorder recommendations appropriate?
+
+### 3. 🚚 Supplier Performance
+
+- Which suppliers meet on-time and in-full delivery expectations?
+- How long do suppliers take to deliver?
+- Where are delays, incomplete deliveries, or defects occurring?
+
+### 4. 🏪 Store & Warehouse Operations
+
+- Which stores generate the most revenue?
+- How does store performance differ by region?
+- How is inventory distributed across warehouses and stores?
+- What stock-transfer patterns can be identified?
+
+### 5. 👥 Customer & Product Intelligence
+
+- Which customer segments contribute the most monetary value?
+- Which customers make repeat purchases?
+- Which products contribute the most gross profit where cost data is available?
+- Which products are frequently purchased together?
+
+### 6. 📊 Executive Decision Support
+
+- How are revenue, margin, and inventory changing?
+- Which operational issues deserve attention first?
+- What practical actions are supported by the analytical findings?
+
+Every query should answer a defined business question and include a short explanation of its result, business significance, and data limitations.
+
+---
+
+## 🧠 Advanced Analytics
+
+### 👥 RFM Customer Segmentation
+
+RFM analysis segments customers using:
+
+- **Recency:** Time since the customer's most recent eligible purchase.
+- **Frequency:** Number of eligible purchases during the analysis period.
+- **Monetary Value:** Total eligible purchase value.
+
+The analysis defines its reference date, order eligibility, scoring method, and treatment of missing customer identities. Segment results can support targeted customer engagement strategies.
+
+### 📦 Reorder Point Analysis
+
+Reorder point analysis estimates when replenishment should be considered.
+
+```text
+Reorder Point =
+    Expected Demand During Lead Time + Safety Stock
+```
+
+The approach should account for demand patterns, supplier lead times, inventory available, and outstanding purchase orders where these fields exist.
+
+### ⚠️ Slow-Moving Inventory & Deadstock
+
+Evaluate:
+
+- Last sale date.
+- Days since the last sale.
+- Units sold during a defined period.
+- Current inventory quantity and value.
+- Product movement and inventory age where available.
+
+Thresholds must be documented. A product with no recent sales should be investigated rather than automatically classified as obsolete.
+
+### 🛒 Market Basket Analysis
+
+Use transaction-level sales data to identify products that are frequently purchased together.
+
+Key measures include:
+
+- **Support:** Frequency of an item combination across transactions.
+- **Confidence:** Frequency of a combination relative to transactions containing the first item.
+- **Lift:** Strength of the association compared with independent purchasing.
+
+The results may inform product bundling, cross-selling, and product placement.
+
+### 🏷️ Product Profitability
+
+Where reliable cost data is available, compare revenue, cost of goods sold, gross profit, margin, discounts, returns, and inventory investment.
+
+Revenue alone does not establish product profitability.
 
 ---
 
 ## 📈 Power BI Dashboard
 
-The project includes a **7-page interactive Power BI dashboard**.
+RetailIQ is planned as a **seven-page interactive business intelligence dashboard**. Each page focuses on a specific business question.
 
-| Page | Business Purpose |
-|:---:|---|
-| 1️⃣ **Executive Overview** | Overall business performance and headline KPIs |
-| 2️⃣ **Sales & Revenue** | Revenue, margin, AOV, returns and channel performance |
-| 3️⃣ **Inventory Health** | Stock levels, stock-outs, DIO, turnover and deadstock |
-| 4️⃣ **Warehouse Logistics** | Warehouse inventory and stock transfer activity |
-| 5️⃣ **Supplier Scorecard** | OTIF, lead time, delays and supplier quality |
-| 6️⃣ **Store Performance** | Store revenue, productivity and regional performance |
-| 7️⃣ **Product & Customer Analytics** | Product contribution, customer segments and purchasing behaviour |
+| Page | Dashboard Section | Key Visuals & Metrics |
+|---:|---|---|
+| 1 | Executive Overview | Revenue, orders, AOV, margin, inventory value, supplier OTIF, regional trends |
+| 2 | Sales & Revenue | Revenue trends, product rankings, category performance, channel comparisons, returns |
+| 3 | Inventory Health | Stock status, inventory value, turnover, DIO, low-stock products, reorder alerts |
+| 4 | Warehouse Logistics | Inventory distribution, warehouse comparisons, transfers, product availability |
+| 5 | Supplier Scorecard | OTIF, lead time, purchasing volume, delays, defects where supported |
+| 6 | Store Performance | Store rankings, regional performance, monthly trends, sales per store |
+| 7 | Product & Customer Analytics | RFM segments, repeat purchasing, product profitability, market basket analysis |
 
-> **Dashboard principle:** Every page should answer a business question, not simply display charts.
+### 🎨 Dashboard Design Principles
 
-Dashboard screenshots are stored in `dashboards/screenshots/`.
+- Use consistent KPI definitions and number formats.
+- Include relevant date, region, channel, store, and category filters.
+- Give each visual a clear title and readable labels.
+- Avoid misleading axes and unnecessary visual complexity.
+- Display the reporting period and relevant metric definitions.
+- Reconcile Power BI measures against validated analytical results.
+- Clearly identify metrics that cannot be reliably calculated from the available data.
+- Save screenshots of all seven pages in `dashboards/screenshots/`.
+
+### 🖼️ Dashboard Preview
+
+Place actual dashboard screenshots here after the report has been built.
+
+Example Markdown for the completed repository:
+
+```markdown
+![Executive Overview](dashboards/screenshots/01_executive_overview.png)
+![Sales and Revenue](dashboards/screenshots/02_sales_revenue.png)
+![Inventory Health](dashboards/screenshots/03_inventory_health.png)
+```
+
+Continue with the remaining four screenshots. Do not add placeholder images as evidence of a completed dashboard.
 
 ---
 
@@ -286,13 +495,17 @@ Dashboard screenshots are stored in `dashboards/screenshots/`.
 
 | Technology | Purpose |
 |---|---|
-| 🐘 **PostgreSQL** | Relational database |
-| 🗃️ **SQL** | Schema, cleaning, KPI calculations and business questions |
-| 🐍 **Python** | Data quality, EDA and advanced analytics |
-| 🐼 **Pandas / NumPy** | Data manipulation and numerical analysis |
-| 📓 **Jupyter Notebook** | Reproducible Python analysis |
-| 📊 **Power BI** | Interactive business intelligence dashboard |
-| 🔧 **Git / GitHub** | Version control and documentation |
+| 🐘 PostgreSQL | Relational database and integrity constraints |
+| 🗃️ SQL | Data transformations, joins, CTEs, window functions, KPIs |
+| 🐍 Python | Data auditing, EDA, validation, and advanced analysis |
+| 🐼 Pandas & NumPy | Data manipulation and numerical analysis |
+| 📓 Jupyter Notebook | Reproducible analytical workflows |
+| 📊 Power BI / Tableau | Interactive dashboards and reporting |
+| 📈 Matplotlib / Seaborn | Exploratory visualisations where used |
+| 🔧 Git & GitHub | Version control and project documentation |
+| 📝 Markdown / PDF Tools | Data dictionary, business report, and presentation |
+
+The final repository should document the tools actually used in the implementation.
 
 ---
 
@@ -303,7 +516,6 @@ RetailIQ-Analytics-Engine/
 │
 ├── README.md
 ├── Data_Dictionary.md
-├── requirements.txt
 │
 ├── sql_scripts/
 │   ├── 01_schema_definition.sql
@@ -312,11 +524,9 @@ RetailIQ-Analytics-Engine/
 │   └── 04_business_questions.sql
 │
 ├── python_notebooks/
-│   ├── 00_generate_raw_data.py
-│   ├── 01_data_quality_audit.py
-│   ├── 02_exploratory_analysis.py
-│   ├── 03_advanced_modeling.py
-│   └── 04_data_ingestion_pipeline.py
+│   ├── 01_data_quality_audit.ipynb
+│   ├── 02_exploratory_analysis.ipynb
+│   └── 03_advanced_modeling.ipynb
 │
 ├── dashboards/
 │   ├── RetailIQ_Performance_Dashboard.pbix
@@ -331,139 +541,182 @@ RetailIQ-Analytics-Engine/
     └── Presentation.pdf
 ```
 
-> **Note:** The repository structure above should match the actual files committed to GitHub. If a filename or deliverable differs in the repository, update this section accordingly.
+**Repository note:** This is the target structure. Update it to match the files actually committed to GitHub. Include additional scripts, configuration files, or outputs only when they exist and are maintained.
+
+### 🔧 Repository Best Practices
+
+- Preserve raw source data.
+- Never commit passwords, database credentials, or other secrets.
+- Follow internship rules before publishing source datasets.
+- Avoid committing large generated datasets unless required and permitted.
+- Provide actual `.ipynb` files when notebooks are required.
+- Keep documentation paths consistent with repository filenames.
+- Commit work regularly to demonstrate individual progress.
 
 ---
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the Repository
+### 1. Clone the Repository
+
+Replace the example URL with the actual GitHub repository URL.
 
 ```bash
-git clone <git clone https://github.com/YashodiChathurya/RetailIQ-Analytics-Engine.git
-cd RetailIQ-Analytics-Engine>
+git clone <YOUR_GITHUB_REPOSITORY_URL>
 cd RetailIQ-Analytics-Engine
 ```
 
-### 2️⃣ Create the PostgreSQL Database
+### 2. Create the Database
+
+For a PostgreSQL implementation:
 
 ```sql
-CREATE DATABASE "RetailIQ_DB";
+CREATE DATABASE retailiq_db;
 ```
 
-### 3️⃣ Run the SQL Scripts
+Connect to the new database using PostgreSQL or an appropriate database client.
 
-Run the database scripts in the following order:
+### 3. Create the Database Schema
+
+If the schema file exists and is compatible with PostgreSQL:
 
 ```bash
-psql -d RetailIQ_DB -f sql_scripts/01_schema_definition.sql
-psql -d RetailIQ_DB -f sql_scripts/02_data_cleaning.sql
-psql -d RetailIQ_DB -f sql_scripts/03_kpi_calculations.sql
-psql -d RetailIQ_DB -f sql_scripts/04_business_questions.sql
+psql -d retailiq_db -f sql_scripts/01_schema_definition.sql
 ```
 
-### 4️⃣ Set Up the Python Environment
+Verify the tables, keys, constraints, and relationships before loading data.
 
-Install the required Python dependencies:
+### 4. Load and Clean the Data
+
+Use the dataset supplied for the internship or the documented simulated dataset. Follow the actual ingestion process and verify the source columns against the database schema.
+
+For the target SQL script structure:
 
 ```bash
-pip install -r requirements.txt
+psql -d retailiq_db -f sql_scripts/02_data_cleaning.sql
+psql -d retailiq_db -f sql_scripts/03_kpi_calculations.sql
+psql -d retailiq_db -f sql_scripts/04_business_questions.sql
 ```
 
-Generate the raw data:
+Run scripts only after satisfying their prerequisites. Some cleaning and KPI scripts may require data-loading steps or database objects that must be created first.
+
+### 5. Set Up the Python Environment
+
+Create a virtual environment on Windows:
 
 ```bash
-python python_notebooks/00_generate_raw_data.py
+python -m venv .venv
+.venv\Scripts\activate
 ```
 
-Run the data ingestion pipeline:
+Install dependencies if a maintained `requirements.txt` exists:
 
 ```bash
-python python_notebooks/04_data_ingestion_pipeline.py
+python -m pip install -r requirements.txt
 ```
 
-Run the data quality audit:
+Open the project's actual Jupyter notebooks and execute them in the documented order.
 
-```bash
-python python_notebooks/01_data_quality_audit.py
-```
+### 6. Open the BI Dashboard
 
-Run exploratory analysis and advanced modelling as required:
+Open the implemented Power BI `.pbix` or Tableau workbook.
 
-```bash
-python python_notebooks/02_exploratory_analysis.py
-python python_notebooks/03_advanced_modeling.py
-```
+1. Configure the correct data source.
+2. Refresh the data model.
+3. Verify relationships and measures.
+4. Compare dashboard results with validated SQL and Python outputs.
+5. Save screenshots of the seven completed dashboard pages.
 
-### 5️⃣ Open the Power BI Dashboard
-
-Open:
-
-```text
-dashboards/RetailIQ_Performance_Dashboard.pbix
-```
-
-Then connect to the local `RetailIQ_DB` PostgreSQL database or the validated processed data, refresh the model, and verify the Power BI measures against the validated SQL/Python outputs.
+**Note:** Commands and filenames must be adjusted to match the actual implementation.
 
 ---
 
-## 📅 8-Week Project Plan
+## 📅 Eight-Week Project Plan
 
-| Week | Focus | Main Output |
-|:---:|---|---|
-| 1 | Planning & Setup | Repository, ERD, data dictionary and project plan |
-| 2 | Database & Audit | 13-table schema, data loading and quality audit |
-| 3 | Data Cleaning | Cleaning scripts, processed data and audit trail |
-| 4 | Core Analysis | KPIs and business-question outputs |
-| 5 | Advanced Analytics | RFM, ROP, deadstock and market basket analysis |
-| 6 | Dashboard | Seven-page Power BI dashboard |
-| 7 | Reporting | Executive report and presentation |
-| 8 | Finalisation | Validation, demonstration and submission package |
+| Week | Focus | Expected Evidence |
+|---:|---|---|
+| 1 | Planning & Setup | Repository, ERD draft, data dictionary, project plan |
+| 2 | Database & Audit | 13-table schema, loading evidence, row counts, quality audit |
+| 3 | Data Cleaning | Cleaning scripts, processed data, exception logs |
+| 4 | Core Analysis | KPI calculations, SQL queries, validation notes |
+| 5 | Advanced Analytics | RFM, reorder point, deadstock, basket analysis where supported |
+| 6 | Dashboard Development | Seven-page BI dashboard and screenshots |
+| 7 | Business Reporting | Executive report, recommendation table, 10-slide presentation |
+| 8 | Finalisation | Final validation, demonstration, and submission package |
+
+### 📝 Weekly Progress Evidence
+
+Each weekly update should include:
+
+- Work completed.
+- Evidence produced.
+- Tasks in progress.
+- Blockers and risks.
+- Decisions required from the mentor.
+- Individual contribution.
+- Next week's plan.
+
+Evidence may include GitHub commits, SQL outputs, notebook results, dashboard screenshots, and report drafts.
 
 ---
 
 ## 📦 Project Deliverables
 
-| Deliverable | Contents |
+| Deliverable | Expected Contents |
 |---|---|
-| 🗂️ **Architecture & Data Dictionary** | ERD, table definitions, relationships, data flow and metric glossary |
-| 🗃️ **SQL Scripts** | Schema, cleaning, KPI calculations and business-question queries |
-| 📓 **Python Analysis** | Data audit, EDA, RFM, ROP, deadstock and market basket analysis |
-| 📊 **Power BI Dashboard** | Seven-page interactive BI dashboard and screenshots |
-| 📄 **Business Report** | Executive insights and evidence-based recommendations |
-| 🖥️ **Presentation** | Ten-slide final project presentation |
+| 🗄️ Architecture & Data Dictionary | ERD, 13-table definitions, relationships, data flow, KPI glossary |
+| 💻 SQL Scripts | Schema, cleaning, KPI calculations, business-question queries |
+| 📓 Python Notebooks | Data quality audit, EDA, RFM, inventory and market basket analysis where supported |
+| 📊 BI Dashboard | Seven-page interactive report and screenshots |
+| 📄 Executive Business Report | Methodology, validated insights, recommendations, evidence, limitations |
+| 🖥️ Final Presentation | Ten-slide project presentation PDF |
+| 📈 Project Evidence | Weekly updates, version history, validation results, final demonstration materials |
+
+### 🎓 Assessment Weighting
+
+| Assessment Area | Weight |
+|---|---:|
+| SQL, Python & Data Cleaning | 30% |
+| EDA, KPIs & Advanced Analytics | 25% |
+| Dashboard Quality & Usability | 15% |
+| Business Recommendations | 15% |
+| Documentation & Presentation | 15% |
+| **Total** | **100%** |
+
+The project should be reproducible and explainable. Every important calculation should be supported by documented logic and evidence.
 
 ---
 
-## 🎓 Project Outcome
+## ✅ Validation Checklist
 
-RetailIQ establishes a structured analytical workflow that connects:
+- [ ] The 13-table database is implemented and row counts are verified.
+- [ ] Primary keys, foreign keys, and constraints are checked.
+- [ ] Raw source data remains unchanged.
+- [ ] Duplicate, null, invalid-value, date, outlier, and orphan-key checks are documented.
+- [ ] Cleaning decisions and rejected records are traceable.
+- [ ] Core KPIs are calculated using documented definitions.
+- [ ] SQL and Python results are reconciled.
+- [ ] Business questions are answered using organised queries.
+- [ ] Python notebooks run and explain the analysis.
+- [ ] Advanced analysis is completed where supported by the data.
+- [ ] All seven dashboard pages are implemented and validated.
+- [ ] Dashboard screenshots are saved.
+- [ ] The executive report and 10-slide presentation are finalised.
+- [ ] Repository paths and filenames match the actual files.
+- [ ] Weekly progress evidence is available.
+- [ ] The final package follows the official internship submission instructions.
 
-```text
-Raw Data
-   ↓
-Data Quality
-   ↓
-SQL Transformation
-   ↓
-KPI Validation
-   ↓
-Advanced Analytics
-   ↓
-Power BI
-   ↓
-Business Recommendations
-```
+---
 
-The project demonstrates how retail data can be transformed into a reliable decision-support system through:
+## ⚠️ Limitations & Assumptions
 
-- ✅ Structured relational data modelling
-- ✅ Reproducible data cleaning
-- ✅ SQL-based KPI development
-- ✅ Python-based analytical validation
-- ✅ Advanced retail analytics
-- ✅ Interactive Power BI reporting
-- ✅ Evidence-based business recommendations
+- Apex Retail Corporation is a simulated business scenario, not a claim about a real company's operations.
+- Final analytical findings depend on the supplied or simulated dataset and its quality.
+- No KPI values should be presented as verified results until they have been calculated and validated.
+- Metrics such as customer lifetime value, supplier defect rate, inventory age, and cash-to-cash cycle require appropriate supporting data.
+- Historical inventory, purchase order, and delivery data must be sufficient for reliable inventory and supplier analysis.
+- Recommendations are proposals; their actual business impact requires subsequent measurement.
+- Data publication and submission must follow the internship's rules.
 
 ---
 
@@ -473,13 +726,11 @@ The project demonstrates how retail data can be transformed into a reliable deci
 
 ### **Yashodi Chathurya Abeysundara**
 
-**Data Analyst**
+**Data Analyst Intern | RetailIQ Project**
 
-Apex Retail Corporation — RetailIQ Project
+Codezela Career Accelerator (CCA)
 
-<br>
-
-⭐ *If you found this project useful, consider giving it a star!*
+<a href="https://github.com/YashodiChathurya">GitHub Profile</a>
 
 </p>
 
@@ -487,6 +738,10 @@ Apex Retail Corporation — RetailIQ Project
 
 <p align="center">
 
-**RetailIQ — Turning Retail Data into Business Intelligence.**
+### 🛒 RetailIQ
+
+**Turning Retail Data into Actionable Business Intelligence.**
+
+*Clean Data. Trusted Metrics. Better Decisions.*
 
 </p>
