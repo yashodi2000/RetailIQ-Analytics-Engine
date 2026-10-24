@@ -687,41 +687,40 @@ Evidence may include GitHub commits, SQL outputs, notebook results, dashboard sc
 ---
 
 ## ✅ Project Validation Checklist
-
-Use this checklist to validate the RetailIQ project before final submission. Mark each item as complete only after verifying the corresponding deliverable or evidence.
+>
 
 ### 🗄️ Database & Data Quality
 
-- [ ] The 13-table PostgreSQL schema is implemented and table row counts are verified.
-- [ ] Primary keys, foreign keys, and database constraints are validated.
-- [ ] Raw source data is preserved separately from cleaned and processed data.
-- [ ] Duplicate records, missing values, invalid values, date inconsistencies, outliers, and orphan keys are checked and documented.
-- [ ] Data-cleaning decisions, rejected records, and exceptions are traceable.
-- [ ] Database relationships are consistent with the implemented ER diagram.
+- [✅] The 13-table PostgreSQL schema is implemented and table row counts are verified.
+- [✅] Primary keys, foreign keys, and database constraints are validated.
+- [✅] Raw source data is preserved separately from cleaned and processed data.
+- [✅] Duplicate records, missing values, invalid values, date inconsistencies, outliers, and orphan keys are checked and     documented.
+- [✅] Data-cleaning decisions, rejected records, and exceptions are traceable.
+- [✅] Database relationships are consistent with the implemented ER diagram.
 
 ### 📊 KPI & Analytical Validation
 
-- [ ] Core KPIs use documented and consistent business definitions.
-- [ ] SQL KPI calculations are cross-checked against Python results.
-- [ ] Revenue, discounts, returns, cost, and profit calculations are handled consistently.
-- [ ] Business questions are answered using organised, reproducible SQL queries.
-- [ ] Python notebooks run successfully and explain the analysis.
-- [ ] Advanced analytics are implemented where supported by the available data.
+- [✅] Core KPIs use documented and consistent business definitions.
+- [✅] SQL KPI calculations are cross-checked against Python results.
+- [✅] Revenue, discounts, returns, cost, and profit calculations are handled consistently.
+- [✅] Business questions are answered using organised, reproducible SQL queries.
+- [✅] Python notebooks run successfully and explain the analysis.
+- [✅] Advanced analytics are implemented where supported by the available data.
 
 ### 📈 Power BI Dashboard & Reporting
 
-- [ ] All seven planned dashboard pages are implemented and validated.
-- [ ] Dashboard measures, filters, relationships, and visualisations are checked.
-- [ ] Dashboard results reconcile with validated SQL and Python outputs.
-- [ ] Dashboard screenshots are saved in the documented folder.
-- [ ] The executive report and 10-slide presentation are completed, if required.
+- [✅] All seven planned dashboard pages are implemented and validated.
+- [✅] Dashboard measures, filters, relationships, and visualisations are checked.
+- [✅] Dashboard results reconcile with validated SQL and Python outputs.
+- [✅] Dashboard screenshots are saved in the documented folder.
+- [✅] The executive report and 10-slide presentation are completed, if required.
 
 ### 📂 Repository & Final Submission
 
-- [ ] Repository paths, filenames, and setup instructions match the actual project files.
-- [ ] Database setup and execution instructions have been tested.
-- [ ] Weekly progress evidence is available, where required.
-- [ ] The final submission follows the official internship or academic submission instructions.
+- [✅] Repository paths, filenames, and setup instructions match the actual project files.
+- [✅] Database setup and execution instructions have been tested.
+- [  ] Weekly progress evidence is available, where required.
+- [✅] The final submission follows the official internship or academic submission instructions.
 
 
 ---
