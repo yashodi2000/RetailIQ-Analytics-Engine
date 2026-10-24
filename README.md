@@ -52,7 +52,7 @@ RetailIQ transforms retail sales, inventory, supplier, customer, and store data 
 
 # 📌 Project Overview
 
-RetailIQ is an end-to-end Business Intelligence and Data Analytics project developed for **Apex Retail Corporation**, a simulated retail organisation, as part of the Codezela Career Accelerator (CCA) Data Analyst Internship.
+RetailIQ is an end-to-end Business Intelligence and Performance Analytics Engine engineered for Apex Retail Corporation to consolidate fragmented retail operations, optimize inventory performance, and deliver real-time executive decision support.
 
 The project aims to transform raw retail data into reliable, validated, and actionable business intelligence through database management, data cleaning, analytical modelling, and interactive reporting.
 
@@ -97,7 +97,7 @@ Apex Retail Corporation is a simulated retail organisation operating across mult
 | 🏷️ Business Attribute | 📋 Project Scope |
 |---|---|
 | 🏪 Retail Outlets | 25 |
-| 🌍 Regions | East, Midwest, South, West |
+| 🌍 Regions | East, North, South, West |
 | 🏭 Regional Warehouses | 4 |
 | 📦 Active Product SKUs | 1,200 |
 | 🛒 Sales Channels | In-store and E-commerce |
