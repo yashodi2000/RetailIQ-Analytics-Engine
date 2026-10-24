@@ -104,7 +104,7 @@ Apex Retail Corporation is a simulated retail organisation operating across mult
 | 📅 Analysis Period | January 2024 – December 2025 |
 | 🗄️ Relational Database | 13 related tables |
 
-> **Note:** These figures describe the simulated project scenario. They are not verified analytical results.
+> 
 
 ---
 
@@ -504,7 +504,7 @@ RetailIQ is designed around a seven-page interactive Business Intelligence dashb
 | 🔧 **Git and GitHub** | Version control and project documentation |
 | 📝 **Markdown / PDF Tools** | Documentation, business reporting, and presentation |
 
-> The final repository should document the technologies actually used in the implementation.
+> 
 
 ---
 
@@ -682,7 +682,7 @@ Evidence may include GitHub commits, SQL outputs, notebook results, dashboard sc
 | 🖥️ Final Presentation | 10-slide project presentation |
 | 📈 Project Evidence | Weekly updates, version history, validation results, final demonstration materials |
 
-> Deliverables should be described as completed only after the corresponding files and results have been produced and verified.
+> 
 
 ---
 
