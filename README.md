@@ -510,8 +510,6 @@ RetailIQ is designed around a seven-page interactive Business Intelligence dashb
 
 # 📂 Repository Structure
 
-The following is the intended repository structure. Update it to match the files actually committed to GitHub.
-
 ```text
 RetailIQ-Analytics-Engine/
 │
@@ -553,7 +551,6 @@ RetailIQ-Analytics-Engine/
 - Follow internship rules before publishing source datasets.
 - Avoid committing large generated datasets unless required and permitted.
 - Include actual notebook files when notebooks are required.
-- Keep documentation paths consistent with repository filenames.
 - Commit work regularly to demonstrate individual progress.
 - Include `requirements.txt` only when it is maintained and reflects the actual Python environment.
 
